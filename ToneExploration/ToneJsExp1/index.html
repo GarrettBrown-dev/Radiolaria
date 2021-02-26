@@ -10,15 +10,40 @@
   <title>Keyboard</title>
   <style>
     #container {
-      width: 100px;
+      position: absolute;
       height: 200px;
       border: 5px solid black;
+    }
+
+    .whitenote {
+      height: 100%;
+      width: 50px;
+      background: white;
+      float: left;
+      border-right: 1px solid black;
     }
   </style>
 </head>
 
 <body>
   <div id='container'></div>
+
+  <script>
+    var notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+
+    var html = "";
+    for (var i = 0; i < notes.length; i++) {
+      var note = notes[i];
+      html += `<div class='whitenote' onmousedown='noteDown(this)' data-note='${note}'></div>`;
+    }
+
+    document.getElementById('container').innerHTML = html;
+
+    function noteDown(elem) {
+      var note = elem.dataset.note;
+      alert(note);
+    }
+  </script>
 </body>
 
 </html>
