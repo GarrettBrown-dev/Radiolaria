@@ -17,6 +17,8 @@
 
 Welcome to Radiolaria! My Capstone project for Epicodus! I'm extremely excited to bring this to life! My inspiration for this project comes from the 2005 video game, Electroplankton which was created by Toshio Iwai and released on Nintendo DS. The game was based on sounds and rhythms created by the player, and included serveral layouts in the form of different "plankton." For example, using the "Tracy" plankton would create different loops of sound, "Beatnes" provided the Super Mario Star Theme by default, and would repeat the beat the player tapped on the screen. There were 10 total plankton layouts provided. The game was considered as nothing more than a toy by some, and others saw a large amount of potential in it if it only had save functions and continuous support. The cartridge for the game was only ever released in Japan, and the various layouts were later brought as DSi Software. Unfortunately, the only way to play this nowadays is by finding a game-cart online... WHICH IS WHY I... WILL DO MY DAMNDEST TO RECREATE THESE TEMPLATES FOR THE GOOD AND FUN OF ALL... NINTENDO, PLEASE DO NOT SUE ME. D: I DON'T HAVE A LOT OF MONEY.
 
+Of note!: This Repo/Directory will contain, not only the project itself, but my exploration into the technologies as well! As an example, this project will contain a THREExploration directory... You are more than welcome to view this! But it's being included for logging purposes. I will upload these individually as well!
+
 ## MVP's!:
 
 - Explore Tone.js, THREE.js, and Matter.js as options for project.

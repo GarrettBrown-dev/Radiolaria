@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+  <script>
+
+    var scene = new THREE.Scene();
+
+    var camera = new THREE.PerspectiveCamera(
+      75, //FOV
+      window.innerWidth / window.innerHeight,
+      0.1, //Near Plane
+      1000 //Far Plane
+    )
+    camera.position.z = 5; //camera's position on Z axis. The lower the number, the closer it gets.
+
+    var renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setClearColor('#e5e5e5'); //light gray coloring.
+    renderer.setSize(window.innerWidth, window.innerHeight); //setting size of scene in browser
+
+    document.body.appendChild(renderer.domElement); //set renderer on DOM.
+
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+
+      camera.updateProjectionMatrix();
+    }) // allows resizing when window is resized.
+
+    var raycaster = new THREE.Raycaster();
+    var mouse = new THREE.Vector2();
+
+    var geometry = new THREE.BoxGeometry(1, 1, 1); // radius, width, height. The higher the number, the higher the vertice count.
+    var material = new THREE.MeshLambertMaterial({ color: 0xF7F7F7 }); //What it's made of.
+    //var mesh = new THREE.Mesh(geometry, material); //combines object and material.
+
+    // mesh.position.set(2, 2, -2); Moves object.
+    // mesh.rotation.set(45, 0, 0); //rotation...
+    // mesh.scale.set(1, 2, 1); //scale...
+
+    //scene.add(mesh);
+
+    meshX = -10;
+    for (var i = 0; i < 15; i++) {
+      var mesh = new THREE.Mesh(geometry, material);
+      mesh.position.x = (Math.random() - 0.5) * 10;
+      mesh.position.y = (Math.random() - 0.5) * 10;
+      mesh.position.z = (Math.random() - 0.5) * 10;
+      scene.add(mesh);
+      meshX += 1;
+    }
+
+    var light = new THREE.PointLight(0xFFFFFF, 1, 1000) //color, intensity, distance
+    light.position.set(0, 0, 0); //x,y,z coords.
+    scene.add(light);
+
+    var light = new THREE.PointLight(0xFFFFFF, 2, 1000)
+    light.position.set(0, 0, 25);
+    scene.add(light);
+
+    var render = function () {
+      requestAnimationFrame(render); //generally better than setInterval. Saves processing power by pausing when not on page.
+
+      //mesh.rotation.x += 0.05; //adds .01 for each time render is called, usually 60 fps. up these for faster rotations.
+      //mesh.rotation.y += 0.01;
+
+      //mesh.scale.x -= 0.01; //make stuff bigger or smaller... Does eventually get too big for the screen.
+
+      renderer.render(scene, camera);
+    }
+    //sets renderer on renderer, which renders the scene. Also prevents distortion of aspect ratio.
+
+    function onMouseMove(event) {
+      event.preventDefault();
+
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+
+      raycaster.setFromCamera(mouse, camera);
+
+      var intersects = raycaster.intersectObjects(scene.children, true);
+      for (var i = 0; i < intersects.length; i++) {
+        this.tl = new TimelineMax();
+        this.tl.to(intersects[i].object.scale, 1, { x: 2, ease: Expo.easeOut }) // sets a timeline for animation, scales by duration of 1, by x axis of 2, exponentially.
+        this.tl.to(intersects[i].object.scale, .5, { x: .5, ease: Expo.easeOut })
+        this.tl.to(intersects[i].object.position, .5, { x: 2, ease: Expo.easeOut })
+        this.tl.to(intersects[i].object.rotation, .5, { y: Math.PI * .5, ease: Expo.easeOut }, "=-1.5")
+      }
+    }
+    //returns an array based on objects that have intersected where mouse is at.
+
+    render();
+
+
+    window.addEventListener('mousemove', onMouseMove);
+
+  </script>
+</body>
+
+</html>
