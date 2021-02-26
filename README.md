@@ -53,16 +53,13 @@ Setup Instructions
 
 ## 🐜 Known Bugs
 
-This application has no known bugs. 
+This application is still a work in progress, therefore will probably contain a fair bit of bugs.
 
 ## ☎️ Support and Contact Details
 
-Please feel free to reach out to us anytime 
+Please feel free to reach out to me anytime!
 
-* Tawnee Harris <tawneeh@icloud.com>
-* Patrick Osten <patrickosten040@gmail.com>
 * Garrett Dean Brown <gman9mm@live.com>
-* Cory Nordenbrock <cordenbrock@gmail.com>
 
 ## 💾 Technologies Used
 
@@ -72,8 +69,6 @@ Please feel free to reach out to us anytime
 * THREE.js
 * Matter.js
 * Tone.js
-* Babel
-* Eslint
 * ...More? Maybe?
 
 ## 📜 Available Scripts
