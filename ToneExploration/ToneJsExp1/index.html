@@ -21,6 +21,16 @@
       background: white;
       float: left;
       border-right: 1px solid black;
+      position: relative;
+    }
+
+    .blacknote {
+      position: absolute;
+      height: 65%;
+      width: 55%;
+      z-index: 1;
+      background: #777;
+      left: 68%;
     }
   </style>
 </head>
@@ -34,8 +44,19 @@
 
     var html = "";
     for (var i = 0; i < notes.length; i++) {
+      var hasSharp = true;
       var note = notes[i];
-      html += `<div class='whitenote' onmousedown='noteDown(this)' data-note='${note + '4'}'></div>`;
+
+      if (note == 'E' || note == 'B')
+        hasSharp = false;
+
+      html += `<div class='whitenote' onmousedown='noteDown(this)' data-note='${note + '4'}'>`;
+
+      if (hasSharp) {
+        html += `<div class='blacknote' onmousedown='noteDown(this)' data-note='${note + '#4'}'></div>`;
+      }
+
+      html += '</div>';
     }
 
     document.getElementById('container').innerHTML = html;
