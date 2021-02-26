@@ -50,10 +50,10 @@
         if (note == 'E' || note == 'B')
           hasSharp = false;
 
-        html += `<div class='whitenote' onmousedown='noteDown(this)' data-note='${note + (octave + 4)}'>`;
+        html += `<div class='whitenote' onmousedown='noteDown(this, false)' data-note='${note + (octave + 4)}'>`;
 
         if (hasSharp) {
-          html += `<div class='blacknote' onmousedown='noteDown(this)' data-note='${note + '#' + (octave + 4)}'></div>`;
+          html += `<div class='blacknote' onmousedown='noteDown(this, true)' data-note='${note + '#' + (octave + 4)}'></div>`;
         }
 
         html += '</div>';
@@ -62,8 +62,9 @@
 
     document.getElementById('container').innerHTML = html;
 
-    function noteDown(elem) {
+    function noteDown(elem, isSharp) {
       var note = elem.dataset.note;
+      elem.style.background = isSharp ? 'black' : '#ccc';
       synth.triggerAttackRelease(note, "16n");
       event.stopPropagation();
     }
