@@ -15,7 +15,22 @@
 
 ## 📋 Description
 
-Welcome to Radiolaria! My Capstone project for Epicodus! I'm extremely excited to bring this to life! My inspiration for this project comes from the 2005 video game, Electroplankton which was created by Toshio Iwai and released on Nintendo DS. The game was based on sounds and rhythms created by the player, and included serveral layouts in the form of different "plankton." For example, using the "Tracy" plankton would create different loops of sound, "Beatnes" provided the Super Mario Star Theme by default, and would repeat the beat the player tapped on the screen. There were 10 total plankton layouts provided. The game was considered as nothing more than a toy by some, and others saw a large amount of potential in it if it only had save functions and continuous support. The cartridge for the game was only ever released in Japan, and the various layouts were later brought as DSi Software. Unfortunately, the only way to play this nowadays is by finding a game-cart online... WHICH IS WHY I... WILL DO MY DAMNDEST TO RECREATE THESE TEMPLATES FOR THE GOOD AND FUN OF ALL.
+Welcome to Radiolaria! My Capstone project for Epicodus! I'm extremely excited to bring this to life! My inspiration for this project comes from the 2005 video game, Electroplankton which was created by Toshio Iwai and released on Nintendo DS. The game was based on sounds and rhythms created by the player, and included serveral layouts in the form of different "plankton." For example, using the "Tracy" plankton would create different loops of sound, "Beatnes" provided the Super Mario Star Theme by default, and would repeat the beat the player tapped on the screen. There were 10 total plankton layouts provided. The game was considered as nothing more than a toy by some, and others saw a large amount of potential in it if it only had save functions and continuous support. The cartridge for the game was only ever released in Japan, and the various layouts were later brought as DSi Software. Unfortunately, the only way to play this nowadays is by finding a game-cart online... WHICH IS WHY I... WILL DO MY DAMNDEST TO RECREATE THESE TEMPLATES FOR THE GOOD AND FUN OF ALL... NINTENDO, PLEASE DO NOT SUE ME. D: I DON'T HAVE A LOT OF MONEY.
+
+## MVP's!:
+
+- Explore Tone.js, THREE.js, and Matter.js as options for project.
+- Create an environment reminiscent of the "Hanenbow" Template: A basic green background, with a simple "Plant."
+- Create objects that, on collision, create a sound.
+- Allow player to have control of at least one object on screen
+- Have a friggin awesome time!
+
+## Stretch Goals!: 
+
+- Create all templates from the original game!
+- Allow users to save their layouts or rhythms for future use!
+- Create new templates for the world to enjoy!
+- The world relizes this is the future of music making and buys the idea off me, (With proper credit to Toshio) and gives me a billion dollars in royalties when Cher does another album exclusively using Radiolaria as the instrumental software.
 
 ## ⚙️ Setup/Installation Requirements
 
@@ -24,7 +39,7 @@ Software Requirements
 * A code editor; I prefer VSCode
 
 Open by Downloading or Cloning
-* Navigate to <https://github.com/tawneeh/react-firebase.git>
+* Navigate to <https://github.com/GarrettBrown-dev/Radiolaria>
 * Download this repository to your computer by clicking the green Code button and 'Download Zip'
 * Or clone the repository
 
@@ -49,19 +64,17 @@ Please feel free to reach out to us anytime
 
 ## 💾 Technologies Used
 
-* React
+* HTML
 * JavaScript
-* Firebase
-* Firestore
-* JSX
-* Webpack
+* CSS
+* THREE.js
+* Matter.js
+* Tone.js
 * Babel
 * Eslint
-* Created using `create-react-app`
+* ...More? Maybe?
 
 ## 📜 Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
@@ -78,8 +91,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### License
 
