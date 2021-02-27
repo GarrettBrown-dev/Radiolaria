@@ -29,7 +29,8 @@ function draw() {
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].show();
   }
-  fill(255);
-  strokeWeight(4);
-  line(0, height, width, height);
+  noStroke(255);
+  fill(170);
+  rectMode(CENTER);
+  rect(200, height, width, 10);
 }
