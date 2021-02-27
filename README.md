@@ -1,7 +1,7 @@
-# 🌋 React Firebase
+# 🌋 Radiolaria!
 
-#### _React Firebase Project for Epicodus_
-#### _DATE 02.25.2021_
+#### _My Capstone project for Epicodus!_
+#### _DATE 02.26.2021_
 
 <p align="center">
     <br>
