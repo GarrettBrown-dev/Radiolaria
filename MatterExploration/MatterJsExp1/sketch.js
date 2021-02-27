@@ -20,7 +20,7 @@ function setup() {
   World.add(world, ground);
 }
 
-function mousePressed() {
+function mouseDragged() {
   boxes.push(new Box(mouseX, mouseY, 20, 20));
 }
 
@@ -29,4 +29,7 @@ function draw() {
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].show();
   }
+  fill(255);
+  strokeWeight(4);
+  line(0, height, width, height);
 }
