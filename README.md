@@ -10,8 +10,8 @@
     </a>
 </p>
 
-#### ✒️ By _**Garrett Dean Brown**_
 <br>
+#### ✒️ By _**Garrett Dean Brown**_
 
 ## 📋 Description
 
