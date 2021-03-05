@@ -17,18 +17,22 @@ function setup() {
 
   for (var x = 20; x < 380; x += 40) {
 
-    var p1 = new Particle(x, 100, 10);
+    var prev = null;
+    var p = new Particle(x, 100, 10);
     // var p2 = new Particle(200, 150, 10);
-    particles.push(p1);
+    particles.push(p);
 
-    // var options = {
-    //   bodyA: p1.body,
-    //   bodyB: p2.body,
-    //   length: 50,
-    //   stiffness: 0.4
-    // var constraint = Constraint.create(options);
-
-    // World.add(world, constraint);
+    if (prev) {
+      var options = {
+        bodyA: p1.body,
+        bodyB: prev.body,
+        length: 50,
+        stiffness: 0.4
+      }
+      var constraint = Constraint.create(options);
+      World.add(world, constraint);
+    }
+    prev = p;
   }
   boundaries.push(new Boundary(200, height, width, 100));
 }
