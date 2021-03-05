@@ -1,6 +1,7 @@
 var Engine = Matter.Engine,
   World = Matter.World,
   Bodies = Matter.Bodies;
+Constraint = Matter.Constraint;
 
 var engine;
 var world;
@@ -18,7 +19,16 @@ function setup() {
   var p2 = new Particle(200, 150, 10);
   particles.push(p1, p2);
 
+  var options = {
+    bodyA: p1.body,
+    bodyB: p2.body,
+    length: 50,
+    stiffness: 0.4
+  }
+  var constraint = Constraint.create(options);
+
   boundaries.push(new Boundary(200, height, width, 100));
+  World.add(world, constraint);
 }
 
 
