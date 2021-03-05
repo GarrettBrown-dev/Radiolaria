@@ -15,16 +15,15 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
+  var prev = null;
   for (var x = 20; x < 380; x += 40) {
 
-    var prev = null;
     var p = new Particle(x, 100, 10);
-    // var p2 = new Particle(200, 150, 10);
     particles.push(p);
 
     if (prev) {
       var options = {
-        bodyA: p1.body,
+        bodyA: p.body,
         bodyB: prev.body,
         length: 50,
         stiffness: 0.4
@@ -36,7 +35,6 @@ function setup() {
   }
   boundaries.push(new Boundary(200, height, width, 100));
 }
-
 
 function draw() {
   background(51);
