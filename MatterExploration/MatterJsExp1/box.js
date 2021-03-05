@@ -7,6 +7,11 @@ function Circle(x, y, r) {
   this.r = r;
   World.add(world, this.body);
 
+  this.isOffScreen = function () {
+    var pos = this.body.position;
+    return (pos.y > height + 100);
+  }
+
   this.show = function () {
     var pos = this.body.position;
     var angle = this.body.angle;
