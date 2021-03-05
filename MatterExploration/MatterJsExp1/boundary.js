@@ -1,9 +1,9 @@
-function Boundary(x, y, w, h) {
+function Boundary(x, y, w, h, a) {
   var options = {
     friction: 0.3,
     restitution: 0.6,
     isStatic: true,
-    angle: PI / 4
+    angle: a
   }
   this.body = Bodies.rectangle(x, y, w, h, options);
   this.w = w;

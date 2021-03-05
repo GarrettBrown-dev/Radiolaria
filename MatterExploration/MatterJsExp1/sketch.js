@@ -6,6 +6,8 @@ var Engine = Matter.Engine,
 var engine;
 var world;
 var boxes = [];
+var boundaries = [];
+
 var ground;
 
 function setup() {
@@ -13,8 +15,9 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   // Engine.run(engine); Having this was causing rectangles to glitch through the ground. Can be fixed with Engine.update, smaller timesteps, or thicker floors.
+
+  boundaries.push(new Boundary(200, height, width, 50, 0.3))
   ground = new Boundary(200, height, width, 100);
-  World.add(world, ground);
 }
 
 function mousePressed() {
@@ -27,5 +30,7 @@ function draw() {
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].show();
   }
-  ground.show();
+  for (var i = 0; i < boundaries.length; i++) {
+    boundaries[i].show();
+  }
 }
