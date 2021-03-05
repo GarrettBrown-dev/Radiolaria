@@ -16,20 +16,20 @@ function setup() {
   world = engine.world;
 
   var prev = null;
-  for (var x = 20; x < 380; x += 40) {
+  for (var x = 200; x < 400; x += 20) {
 
     var fixed = false;
     if (!prev) {
       fixed = true;
     }
-    var p = new Particle(x, 100, 10, fixed);
+    var p = new Particle(x, 100, 5, fixed);
     particles.push(p);
 
     if (prev) {
       var options = {
         bodyA: p.body,
         bodyB: prev.body,
-        length: 50,
+        length: 20,
         stiffness: 0.4
       }
       var constraint = Constraint.create(options);
