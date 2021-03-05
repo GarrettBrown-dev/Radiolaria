@@ -16,7 +16,7 @@ function setup() {
   var options = {
     isStatic: true
   }
-  ground = Bodies.rectangle(200, height, width, 10, options)
+  ground = Bodies.rectangle(200, height - 50, width, 10, options)
   World.add(world, ground);
 }
 
@@ -32,5 +32,5 @@ function draw() {
   noStroke(255);
   fill(170);
   rectMode(CENTER);
-  rect(200, height, width, 10);
+  rect(ground.position.x, ground.position.y, width, 10);
 }
