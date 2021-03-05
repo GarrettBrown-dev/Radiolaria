@@ -15,7 +15,7 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  var p1 = new Particle(200, 100, 10);
+  var p1 = new Particle(230, 100, 10);
   var p2 = new Particle(200, 150, 10);
   particles.push(p1, p2);
 
@@ -41,5 +41,7 @@ function draw() {
   for (var i = 0; i < particles.length; i++) {
     particles[i].show();
   }
+
+  line(particles[0].body.position.x, particles[0].body.position.y, particles[1].body.position.x, particles[1].body.position.y);
 
 }
