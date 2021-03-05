@@ -18,7 +18,11 @@ function setup() {
   var prev = null;
   for (var x = 20; x < 380; x += 40) {
 
-    var p = new Particle(x, 100, 10);
+    var fixed = false;
+    if (!prev) {
+      fixed = true;
+    }
+    var p = new Particle(x, 100, 10, fixed);
     particles.push(p);
 
     if (prev) {
