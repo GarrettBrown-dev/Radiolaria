@@ -1,7 +1,9 @@
 var Engine = Matter.Engine,
   World = Matter.World,
-  Bodies = Matter.Bodies;
-Constraint = Matter.Constraint;
+  Bodies = Matter.Bodies,
+  Constraint = Matter.Constraint,
+  Mouse = Matter.Mouse,
+  MouseConstraint = Matter.MouseConstraint;
 
 var engine;
 var world;
@@ -10,8 +12,10 @@ var boundaries = [];
 
 var ground;
 
+var mConstraint;
+
 function setup() {
-  createCanvas(400, 400);
+  var canvas = createCanvas(400, 400);
   engine = Engine.create();
   world = engine.world;
 
@@ -38,6 +42,13 @@ function setup() {
     prev = p;
   }
   boundaries.push(new Boundary(200, height, width, 100));
+
+  var canvasMouse = Mouse.create(canvas.elt);
+  var options = {
+    mouse: canvasMouse
+  }
+  mConstraint = MouseConstraint.create(engine, options)
+  World.add(world, mConstraint);
 }
 
 function draw() {
