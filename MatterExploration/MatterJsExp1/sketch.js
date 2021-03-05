@@ -13,10 +13,7 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
-  var options = {
-    isStatic: true
-  }
-  ground = Bodies.rectangle(200, height - 50, width, 100, options)
+  ground = new Boundary(200, height, width, 100);
   World.add(world, ground);
 }
 
@@ -29,8 +26,5 @@ function draw() {
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].show();
   }
-  noStroke(255);
-  fill(170);
-  rectMode(CENTER);
-  rect(ground.position.x, ground.position.y, width, 100);
+  ground.show();
 }
