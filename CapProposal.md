@@ -3,7 +3,7 @@ Hello! And welcome to my initial proposal for Capstones! These ARE listed in my 
 Description: 
 Recreation of an old DS software! Sound-based, simple and fun to mess around with! The idea is to get it looking like the Hanenbow template! (1:36), although if I can, I'd like to eventually recreate them all!: https://www.youtube.com/watch?v=ttFoK8BTXM4&t=1401s
 
-Tech Stack: 
+Tech Stack:  
 -JS 
 -Canvas.js 
 -Tone.js 
