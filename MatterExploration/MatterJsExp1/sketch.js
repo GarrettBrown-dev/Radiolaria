@@ -5,7 +5,7 @@ var Engine = Matter.Engine,
 
 var engine;
 var world;
-var boxes = [];
+var circles = [];
 var boundaries = [];
 
 var ground;
@@ -21,15 +21,15 @@ function setup() {
   ground = new Boundary(200, height, width, 100);
 }
 
-function mousePressed() {
-  boxes.push(new Box(mouseX, mouseY, random(10, 40)));
+function mouseDragged() {
+  circles.push(new Circle(mouseX, mouseY, random(5, 10)));
 }
 
 function draw() {
   background(51);
   Engine.update(engine);
-  for (var i = 0; i < boxes.length; i++) {
-    boxes[i].show();
+  for (var i = 0; i < circles.length; i++) {
+    circles[i].show();
   }
   for (var i = 0; i < boundaries.length; i++) {
     boundaries[i].show();
