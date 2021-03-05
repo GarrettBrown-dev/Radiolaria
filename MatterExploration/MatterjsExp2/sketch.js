@@ -62,6 +62,10 @@ function draw() {
     particles[i].show();
   }
 
-  // line(particles[0].body.position.x, particles[0].body.position.y, particles[1].body.position.x, particles[1].body.position.y);
+  if (mConstraint.body) {
+    var pos = mConstraint.body.position;
+    fill(0, 255, 0);
+    ellipse(pos.x, pos.y, 20, 20);
+  }
 
 }
