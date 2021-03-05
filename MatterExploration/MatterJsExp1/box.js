@@ -1,11 +1,10 @@
-function Box(x, y, w, h) {
+function Box(x, y, r) {
   var options = {
-    friction: 0.3,
+    friction: 0,
     restitution: 0.6,
   }
-  this.body = Bodies.rectangle(x, y, w, h);
-  this.w = w;
-  this.h = h;
+  this.body = Bodies.circle(x, y, r, options);
+  this.r = r;
   World.add(world, this.body);
 
   this.show = function () {
@@ -18,7 +17,7 @@ function Box(x, y, w, h) {
     strokeWeight(1);
     stroke(255);
     fill(127);
-    rect(0, 0, this.w, this.h);
+    ellipse(0, 0, this.r);
     pop();
   }
 

@@ -22,7 +22,7 @@ function setup() {
 }
 
 function mousePressed() {
-  boxes.push(new Box(mouseX, mouseY, random(10, 40), random(10, 40)));
+  boxes.push(new Box(mouseX, mouseY, random(10, 40)));
 }
 
 function draw() {
