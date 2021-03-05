@@ -44,6 +44,7 @@ function setup() {
   boundaries.push(new Boundary(200, height, width, 100));
 
   var canvasMouse = Mouse.create(canvas.elt);
+  canvasMouse.pixelRatio = pixelDensity();
   var options = {
     mouse: canvasMouse
   }
