@@ -64,8 +64,10 @@ function draw() {
 
   if (mConstraint.body) {
     var pos = mConstraint.body.position;
-    fill(0, 255, 0);
-    ellipse(pos.x, pos.y, 20, 20);
+    var offset = mConstraint.constraint.pointB;
+    var m = mConstraint.mouse.position;
+    stroke(0, 255, 0);
+    line(pos.x + offset.x, pos.y + offset.y, m.x, m.y);
   }
 
 }
