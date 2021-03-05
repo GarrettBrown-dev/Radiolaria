@@ -16,7 +16,8 @@ function setup() {
   world = engine.world;
   // Engine.run(engine); Having this was causing rectangles to glitch through the ground. Can be fixed with Engine.update, smaller timesteps, or thicker floors.
 
-  boundaries.push(new Boundary(200, height, width, 50, 0.3))
+  boundaries.push(new Boundary(150, 100, width * 0.6, 20, 0.3));
+  boundaries.push(new Boundary(250, 300, width * 0.6, 20, -0.3));
   ground = new Boundary(200, height, width, 100);
 }
 
