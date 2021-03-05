@@ -12,6 +12,10 @@ function Circle(x, y, r) {
     return (pos.y > height + 100);
   }
 
+  this.removeFromWorld = function () {
+    World.remove(world, this.body);
+  }
+
   this.show = function () {
     var pos = this.body.position;
     var angle = this.body.angle;
