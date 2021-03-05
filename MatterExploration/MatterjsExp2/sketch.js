@@ -14,8 +14,9 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  var p = new Particle(200, 100, 10);
-  particles.push(p);
+  var p1 = new Particle(200, 100, 10);
+  var p2 = new Particle(200, 150, 10);
+  particles.push(p1, p2);
 
   boundaries.push(new Boundary(200, height, width, 100));
 }
