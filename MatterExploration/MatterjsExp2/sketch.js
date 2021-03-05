@@ -15,21 +15,23 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  var p1 = new Particle(230, 100, 10);
-  var p2 = new Particle(200, 150, 10);
-  particles.push(p1, p2);
+  for (var x = 20; x < 380; x += 20) {
 
-  var options = {
-    bodyA: p1.body,
-    bodyB: p2.body,
-    length: 50,
-    stiffness: 0.4
+    var p1 = new Particle(230, 100, 10);
+    var p2 = new Particle(200, 150, 10);
+    // particles.push(p1, p2);
+
+    // var options = {
+    //   bodyA: p1.body,
+    //   bodyB: p2.body,
+    //   length: 50,
+    //   stiffness: 0.4
   }
-  var constraint = Constraint.create(options);
+  // var constraint = Constraint.create(options);
 
-  boundaries.push(new Boundary(200, height, width, 100));
-  World.add(world, constraint);
+  // World.add(world, constraint);
 }
+boundaries.push(new Boundary(200, height, width, 100));
 
 
 function draw() {
