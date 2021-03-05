@@ -32,7 +32,7 @@ function draw() {
   for (var i = 0; i < circles.length; i++) {
     circles[i].show();
     if (circles[i].isOffScreen()) {
-      circles[i] / removeFromWorld();
+      circles[i].removeFromWorld();
       circles.splice(i, 1);
       i--;
     }
