@@ -2,7 +2,8 @@ function Boundary(x, y, w, h) {
   var options = {
     friction: 0.3,
     restitution: 0.6,
-    isStatic: true
+    isStatic: true,
+    angle: PI / 4
   }
   this.body = Bodies.rectangle(x, y, w, h, options);
   this.w = w;
@@ -17,7 +18,7 @@ function Boundary(x, y, w, h) {
     rotate(angle);
     rectMode(CENTER);
     strokeWeight(1);
-    stroke(255);
+    noStroke();
     fill(0);
     rect(0, 0, this.w, this.h);
     pop();
