@@ -12,7 +12,7 @@ function setup() {
   world = engine.world;
   ground = new Ground(width / 2, height - 10, width, 20);
   for (let i = 0; i < 3; i++) {
-    boxes[i] = new Box(450, 300, 50, 75);
+    boxes[i] = new Box(450, 300 - i * 75, 50, 75);
   }
   bird = new Bird(50, 300, 25);
 
