@@ -56,7 +56,7 @@ function mouseReleased() {
 }
 
 function draw() {
-  background(0);
+  background(bkgImg);
   Matter.Engine.update(engine);
   ground.show();
   for (let box of boxes) {
