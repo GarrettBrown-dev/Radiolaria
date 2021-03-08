@@ -14,7 +14,8 @@ class Box {
     rotate(angle);
     fill(255);
     rectMode(CENTER);
-    rect(0, 0, this.w, this.h);
+    imageMode(CENTER);
+    image(boxImg, 0, 0, this.w, this.h);
     pop();
   }
 
