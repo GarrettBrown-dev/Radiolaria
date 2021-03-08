@@ -9,18 +9,21 @@ let slingshot;
 
 let dotImg;
 let boxImg;
+let bkgImg;
+
 function preload() {
   dotImg = loadImage('img/dot.png');
   boxImg = loadImage('img/equals.png');
+  bkgImg = loadImage('img/skyBackground.png');
 }
 
 function setup() {
-  const canvas = createCanvas(600, 400);
+  const canvas = createCanvas(711, 400);
   engine = Engine.create();
   world = engine.world;
   ground = new Ground(width / 2, height - 10, width, 20);
   for (let i = 0; i < 3; i++) {
-    boxes[i] = new Box(450, 300 - i * 75, 100, 100);
+    boxes[i] = new Box(450, 300 - i * 75, 84, 100);
   }
   bird = new Bird(150, 300, 25);
 
@@ -29,7 +32,9 @@ function setup() {
   const mouse = Mouse.create(canvas.elt);
   const options = {
     mouse: mouse
-  }
+  };
+
+  mouse.pixelRatio = pixelDensity();
   mConstraint = MouseConstraint.create(engine, options);
   World.add(world, mConstraint);
 }
@@ -37,7 +42,7 @@ function setup() {
 function keyPressed() {
   if (key == ' ') {
     World.remove(world, bird.body);
-    bird = new Bird(150, 300, 16);
+    bird = new Bird(150, 300, 25);
     slingshot.attach(bird.body);
   }
 
