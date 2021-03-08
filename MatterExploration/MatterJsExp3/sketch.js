@@ -29,8 +29,16 @@ function setup() {
 
 function keyPressed() {
   if (key == ' ') {
-    slingshot.fly()
+    bird = new Bird(150, 300, 16);
+    slingshot.attach(bird.body);
   }
+
+}
+
+function mouseReleased() {
+  setTimeout(() => {
+    slingshot.fly();
+  }, 100);
 
 }
 

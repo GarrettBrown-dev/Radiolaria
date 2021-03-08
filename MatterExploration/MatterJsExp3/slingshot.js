@@ -7,7 +7,7 @@ class SlingShot {
         y: y
       },
       bodyB: body,
-      stiffness: 0.5,
+      stiffness: 0.2,
       length: 40
     }
     this.sling = Constraint.create(options);
@@ -25,6 +25,10 @@ class SlingShot {
       const posB = this.sling.bodyB.position;
       line(posA.x, posA.y, posB.x, posB.y);
     }
+  }
+
+  attach(body) {
+    this.sling.bodyB = body;
   }
 
 }
