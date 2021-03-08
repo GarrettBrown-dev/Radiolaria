@@ -1,13 +1,12 @@
 class SlingShot {
   constructor(x, y, body) {
-
     const options = {
       pointA: {
         x: x,
         y: y
       },
       bodyB: body,
-      stiffness: 0.2,
+      stiffness: 0.02,
       length: 40
     }
     this.sling = Constraint.create(options);
@@ -20,7 +19,8 @@ class SlingShot {
 
   show() {
     if (this.sling.bodyB) {
-      stroke(255);
+      stroke(0);
+      strokeWeight(1);
       const posA = this.sling.pointA;
       const posB = this.sling.bodyB.position;
       line(posA.x, posA.y, posB.x, posB.y);
