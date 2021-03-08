@@ -1,15 +1,25 @@
+const { Engine, World, Bodies, Mouse, MouseConstraint, Constraint } = Matter;
+
 let ground;
 let box;
 let bird;
-let world, enginer;
+let world, engine;
+let mConstraint
 
 function setup() {
-  createCanvas(600, 400);
-  engine = Matter.Engine.create();
+  const canvas = createCanvas(600, 400);
+  engine = Engine.create();
   world = engine.world;
   ground = new Ground(width / 2, height - 10, width, 20);
   box = new Box(450, 300, 50, 75);
   bird = new Bird(50, 300, 25);
+
+  const mouse = Mouse.create(canvas.elt);
+  const options = {
+    mouse: mouse
+  }
+  mConstraint = MouseConstraint.create(engine, options);
+  World.add(world, mConstraint);
 }
 
 function draw() {
