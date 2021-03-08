@@ -4,7 +4,8 @@ let ground;
 const boxes = [];
 let bird;
 let world, engine;
-let mConstraint
+let mConstraint;
+let slingshot;
 
 function setup() {
   const canvas = createCanvas(600, 400);
@@ -15,6 +16,8 @@ function setup() {
     boxes[i] = new Box(450, 300 - i * 75, 50, 75);
   }
   bird = new Bird(50, 300, 25);
+
+  slingshot = new SlingShot(50, 300, bird.body);
 
   const mouse = Mouse.create(canvas.elt);
   const options = {
@@ -32,4 +35,5 @@ function draw() {
     box.show();
   }
   bird.show();
+  slingshot.show();
 }
