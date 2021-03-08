@@ -14,6 +14,7 @@ function setup() {
 
 function draw() {
   background(0);
+  Matter.Engine.update(engine);
   ground.show();
   box.show();
   bird.show();
