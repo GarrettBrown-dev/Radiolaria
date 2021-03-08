@@ -1,7 +1,7 @@
 const { Engine, World, Bodies, Mouse, MouseConstraint, Constraint } = Matter;
 
 let ground;
-let box;
+const boxes = [];
 let bird;
 let world, engine;
 let mConstraint
@@ -11,7 +11,9 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   ground = new Ground(width / 2, height - 10, width, 20);
-  box = new Box(450, 300, 50, 75);
+  for (let i = 0; i < 3; i++) {
+    boxes[i] = new Box(450, 300, 50, 75);
+  }
   bird = new Bird(50, 300, 25);
 
   const mouse = Mouse.create(canvas.elt);
@@ -26,6 +28,8 @@ function draw() {
   background(0);
   Matter.Engine.update(engine);
   ground.show();
-  box.show();
+  for (let box of boxes) {
+    box.show();
+  }
   bird.show();
 }
