@@ -7,13 +7,20 @@ let world, engine;
 let mConstraint;
 let slingshot;
 
+let dotImg;
+let boxImg;
+function preload() {
+  dotImg = loadImage('img/dot.png');
+  boxImg = loadImage('img/equals.png');
+}
+
 function setup() {
   const canvas = createCanvas(600, 400);
   engine = Engine.create();
   world = engine.world;
   ground = new Ground(width / 2, height - 10, width, 20);
   for (let i = 0; i < 3; i++) {
-    boxes[i] = new Box(450, 300 - i * 75, 50, 75);
+    boxes[i] = new Box(450, 300 - i * 75, 100, 100);
   }
   bird = new Bird(150, 300, 25);
 
@@ -29,6 +36,7 @@ function setup() {
 
 function keyPressed() {
   if (key == ' ') {
+    World.remove(world, bird.body);
     bird = new Bird(150, 300, 16);
     slingshot.attach(bird.body);
   }
@@ -49,6 +57,6 @@ function draw() {
   for (let box of boxes) {
     box.show();
   }
-  bird.show();
   slingshot.show();
+  bird.show();
 }
