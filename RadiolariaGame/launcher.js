@@ -18,7 +18,7 @@ class Launcher {
   }
 
   show() {
-    if (this.sling.bodyB) {
+    if (this.launcher.bodyB) {
       stroke(0);
       strokeWeight(1);
       const posA = this.launcher.pointA;
@@ -28,7 +28,7 @@ class Launcher {
   }
 
   attach(body) {
-    this.sling.bodyB = body;
+    this.launcher.bodyB = body;
   }
 
 }

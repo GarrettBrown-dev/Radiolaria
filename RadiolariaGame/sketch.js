@@ -1,4 +1,5 @@
 const { Engine, World, Bodies, Mouse, MouseConstraint, Constraint } = Matter;
+var leaves = [];
 
 function preload() {
   bkgImg = loadImage('img/background.jpg');
