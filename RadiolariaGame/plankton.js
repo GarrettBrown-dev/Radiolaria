@@ -1,9 +1,9 @@
-function Circle(x, y, r) {
+function Plankton(x, y, r) {
   var options = {
     friction: 0,
     restitution: 0.6,
   }
-  this.body = Bodies.circle(x, y, r, options);
+  this.body = Bodies.plankton(x, y, r, options);
   this.r = r;
   World.add(world, this.body);
 
@@ -25,8 +25,9 @@ function Circle(x, y, r) {
     rectMode(CENTER);
     strokeWeight(1);
     stroke(255);
-    fill(127);
+    fill('pink');
     ellipse(0, 0, this.r * 2);
+    line(0, 0, this.r, 0);
     pop();
   }
 
