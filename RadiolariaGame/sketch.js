@@ -10,9 +10,8 @@ function setup() {
   var canvas = createCanvas(711, 400);
   engine = Engine.create();
   world = engine.world;
-  leaves.push(new Leaf(150, 200, width * 0.6, 20, 0.3));
-  leaves.push(new Leaf(250, 300, width * 0.6, 20, -0.3));
-  ground = new Leaf(200, height, width, 100);
+  leaves.push(new Leaf(100, 200, width * 0.6, 20, 0.3));
+  leaves.push(new Leaf(400, 300, width * 0.6, 20, -0.3));
 
 
   const mouse = Mouse.create(canvas.elt);
@@ -23,7 +22,7 @@ function setup() {
 
 function draw() {
   background(bkgImg);
-  mPlankton.push(new Plankton(200, 50, random(5, 10)));
+  mPlankton.push(new Plankton(2, 5, 5));
   Engine.update(engine);
   for (var i = 0; i < mPlankton.length; i++) {
     mPlankton[i].show();

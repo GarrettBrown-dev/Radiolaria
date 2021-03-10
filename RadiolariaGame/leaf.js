@@ -19,7 +19,7 @@ function Leaf(x, y, w, h, a) {
     rectMode(CENTER);
     strokeWeight(1);
     noStroke();
-    fill(0);
+    fill('green');
     rect(0, 0, this.w, this.h);
     pop();
   }
