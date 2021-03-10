@@ -7,7 +7,7 @@ function preload() {
 }
 
 function setup() {
-  var canvas = createCanvas(711, 400);
+  var canvas = createCanvas(1500, 700);
   engine = Engine.create();
   world = engine.world;
   leaves.push(new Leaf(100, 200, width * 0.6, 20, 0.3));
