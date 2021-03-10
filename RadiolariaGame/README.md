@@ -47,7 +47,7 @@ Setup Instructions
 
 This application is still a work in progress, therefore will probably contain a fair bit of bugs.
 
-- Couldn't get auto sizing on the window to work, so it's hard-coded to 1500, 700 to fit my screen. I assume adjustments to this will cause it to glitch out, so don't mess with your window if you can help it!
+- Couldn't get auto sizing on the window to work, so it's hard-coded to fit my screen. I assume adjustments to this will cause it to glitch out, so don't mess with your window if you can help it!
 
 ## ☎️ Support and Contact Details
 

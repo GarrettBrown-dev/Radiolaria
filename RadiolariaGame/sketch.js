@@ -7,22 +7,20 @@ function preload() {
 }
 
 function setup() {
-  var canvas = createCanvas(1500, 700); // I couldn't get the auto window sizing to work, so these values will differ by screen!
+  createCanvas(1350, 650); // I couldn't get the auto window sizing to work, so these values will differ by screen!
   engine = Engine.create();
   world = engine.world;
-  leaves.push(new Leaf(100, 200, width * 0.6, 20, 0.3));
-  leaves.push(new Leaf(400, 300, width * 0.6, 20, -0.3));
+  leaves.push(new Leaf(1000, 400, width * 0.175, 5, -0.3));
+  leaves.push(new Leaf(750, 400, width * 0.175, 5, 0.3));
+}
 
 
-  const mouse = Mouse.create(canvas.elt);
-  const options = {
-    mouse: mouse
-  };
+function mousePressed() {
+  mPlankton.push(new Plankton(mouseX, mouseY, 5, 5))
 }
 
 function draw() {
   background(bkgImg);
-  mPlankton.push(new Plankton(2, 5, 5));
   Engine.update(engine);
   for (var i = 0; i < mPlankton.length; i++) {
     mPlankton[i].show();
