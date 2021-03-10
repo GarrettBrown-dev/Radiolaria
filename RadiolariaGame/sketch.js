@@ -11,7 +11,11 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   leaves.push(new Leaf(1000, 400, width * 0.175, 5, -0.3));
+  leaves.push(new Leaf(1000, 275, width * 0.150, 5, -0.3));
+  leaves.push(new Leaf(1000, 150, width * 0.115, 5, -0.3));
   leaves.push(new Leaf(750, 400, width * 0.175, 5, 0.3));
+  leaves.push(new Leaf(750, 275, width * 0.150, 5, 0.3));
+  leaves.push(new Leaf(750, 150, width * 0.115, 5, 0.3));
 }
 
 function mousePressed() {
