@@ -7,7 +7,7 @@ function preload() {
 }
 
 function setup() {
-  var canvas = createCanvas(1500, 700);
+  var canvas = createCanvas(1500, 700); // I couldn't get the auto window sizing to work, so these values will differ by screen!
   engine = Engine.create();
   world = engine.world;
   leaves.push(new Leaf(100, 200, width * 0.6, 20, 0.3));
