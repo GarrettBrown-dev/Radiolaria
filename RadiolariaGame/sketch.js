@@ -14,7 +14,6 @@ function setup() {
   leaves.push(new Leaf(750, 400, width * 0.175, 5, 0.3));
 }
 
-
 function mousePressed() {
   mPlankton.push(new Plankton(mouseX, mouseY, 5, 5))
 }
