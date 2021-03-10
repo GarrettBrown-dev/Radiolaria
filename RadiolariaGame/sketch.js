@@ -1,5 +1,6 @@
 const { Engine, World, Bodies, Mouse, MouseConstraint, Constraint } = Matter;
 var leaves = [];
+var mPlankton = [];
 
 function preload() {
   bkgImg = loadImage('img/background.jpg');
@@ -22,13 +23,13 @@ function setup() {
 
 function draw() {
   background(bkgImg);
-  circles.push(new Circle(200, 50, random(5, 10)));
+  mPlankton.push(new Plankton(200, 50, random(5, 10)));
   Engine.update(engine);
-  for (var i = 0; i < circles.length; i++) {
-    circles[i].show();
-    if (circles[i].isOffScreen()) {
-      circles[i].removeFromWorld();
-      circles.splice(i, 1);
+  for (var i = 0; i < mPlankton.length; i++) {
+    mPlankton[i].show();
+    if (mPlankton[i].isOffScreen()) {
+      mPlankton[i].removeFromWorld();
+      mPlankton.splice(i, 1);
       i--;
     }
   }
