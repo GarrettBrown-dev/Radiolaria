@@ -4,7 +4,7 @@ class Plankton {
       restitution: 0.5
     }
     this.body = Matter.Bodies.circle(x, y, r, options);
-    Matter.Body.setMass(this.body, this.body.mass * 2);
+    Matter.Body.setMass(this.body, this.body.mass * 1);
     Matter.World.add(world, this.body);
     this.r = r;
 

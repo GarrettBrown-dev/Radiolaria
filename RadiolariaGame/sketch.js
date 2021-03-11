@@ -1,5 +1,6 @@
 const { Engine, World, Bodies, Mouse, MouseConstraint, Constraint } = Matter;
 var leaves = [];
+var trees = [];
 var mPlankton = [];
 
 function preload() {
@@ -16,6 +17,7 @@ function setup() {
   leaves.push(new Leaf(750, 400, width * 0.175, 5, 0.3));
   leaves.push(new Leaf(750, 275, width * 0.150, 5, 0.3));
   leaves.push(new Leaf(750, 150, width * 0.115, 5, 0.3));
+  trees.push(new Tree(1000, 750, 0, 0, 1075, 750));
 }
 
 function mousePressed() {
@@ -32,6 +34,9 @@ function draw() {
       mPlankton.splice(i, 1);
       i--;
     }
+  }
+  for (var i = 0; i < trees.length; i++) {
+    trees[i].show();
   }
   for (var i = 0; i < leaves.length; i++) {
     leaves[i].show();
