@@ -27,6 +27,12 @@ function mousePressed() {
 function draw() {
   background(bkgImg);
   Engine.update(engine);
+  for (var i = 0; i < trees.length; i++) {
+    trees[i].show();
+  }
+  for (var i = 0; i < leaves.length; i++) {
+    leaves[i].show();
+  }
   for (var i = 0; i < mPlankton.length; i++) {
     mPlankton[i].show();
     if (mPlankton[i].isOffScreen()) {
@@ -34,11 +40,5 @@ function draw() {
       mPlankton.splice(i, 1);
       i--;
     }
-  }
-  for (var i = 0; i < trees.length; i++) {
-    trees[i].show();
-  }
-  for (var i = 0; i < leaves.length; i++) {
-    leaves[i].show();
   }
 }
