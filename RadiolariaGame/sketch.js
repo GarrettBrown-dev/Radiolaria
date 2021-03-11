@@ -13,11 +13,11 @@ function setup() {
   world = engine.world;
   leaves.push(new Tree(865, 150, width * 50, 50, 1.57));
   leaves.push(new Leaf(1000, 400, width * 0.175, 5, -0.3));
-  leaves.push(new Leaf(1000, 275, width * 0.150, 5, -0.3));
-  leaves.push(new Leaf(1000, 150, width * 0.115, 5, -0.3));
-  leaves.push(new Leaf(740, 400, width * 0.175, 5, 0.3));
-  leaves.push(new Leaf(750, 275, width * 0.150, 5, 0.3));
-  leaves.push(new Leaf(750, 150, width * 0.115, 5, 0.3));
+  leaves.push(new Leaf(986, 275, width * 0.150, 5, -0.3));
+  leaves.push(new Leaf(964, 150, width * 0.115, 5, -0.3));
+  leaves.push(new Leaf(730, 400, width * 0.175, 5, 0.3));
+  leaves.push(new Leaf(745, 275, width * 0.150, 5, 0.3));
+  leaves.push(new Leaf(765, 150, width * 0.115, 5, 0.3));
 }
 
 function mousePressed() {
