@@ -1,7 +1,5 @@
-function Leaf(x, y, w, h, a) {
+function Tree(x, y, w, h, a) {
   var options = {
-    friction: 0.1,
-    restitution: 0.6,
     isStatic: true,
     angle: a
   }
@@ -19,7 +17,7 @@ function Leaf(x, y, w, h, a) {
     rectMode(CENTER);
     strokeWeight(1);
     noStroke();
-    fill('white');
+    fill('brown');
     rect(0, 0, this.w, this.h);
     pop();
   }
