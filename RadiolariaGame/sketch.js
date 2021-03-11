@@ -15,9 +15,9 @@ function setup() {
   leaves.push(new Leaf(1000, 400, width * 0.175, 5, -0.3));
   leaves.push(new Leaf(986, 275, width * 0.150, 5, -0.3));
   leaves.push(new Leaf(964, 150, width * 0.115, 5, -0.3));
-  leaves.push(new Leaf(730, 400, width * 0.175, 5, 0.3));
-  leaves.push(new Leaf(745, 275, width * 0.150, 5, 0.3));
-  leaves.push(new Leaf(765, 150, width * 0.115, 5, 0.3));
+  leaves.push(new Leaf(732, 400, width * 0.175, 5, 0.3));
+  leaves.push(new Leaf(744, 275, width * 0.150, 5, 0.3));
+  leaves.push(new Leaf(766, 150, width * 0.115, 5, 0.3));
 }
 
 function mousePressed() {
