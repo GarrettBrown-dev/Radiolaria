@@ -19,6 +19,28 @@ Welcome to Radiolaria! My Capstone project for Epicodus! I'm extremely excited t
 
 Of note!: This Repo/Directory will contain, not only the project itself, but my exploration into the technologies as well! As an example, this project will contain a THREExploration directory... You are more than welcome to view this! But it's being included for logging purposes. I will upload these individually as well!
 
+Here are some screenshots of my works with the mentioned technologies!:
+
+Three.js Cube Screensaver:
+<img src="READMEImgs\CubeCap.JPG">
+
+Tone.js Keyboard:
+<img src="READMEImgs\KeyCap.JPG">
+
+--Matter.js Examples--
+
+Matter.js object removal example:
+<img src="READMEImgs\LiquidCap.JPG">
+
+Matter.js constraint example:
+<img src="READMEImgs\ChainCap.JPG">
+
+Matter.js Angry Birds Clone:
+<img src="READMEImgs\HappyDotCap.JPG">
+
+--Radiolaria Screencap at time of writing this--
+<img src="READMEImgs\RadioCap.JPG">
+
 ## MVP's!:
 
 - Explore Tone.js, THREE.js, and Matter.js as options for project.
