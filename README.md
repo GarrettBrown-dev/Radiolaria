@@ -1,7 +1,7 @@
 # 🌋 Radiolaria!
 
 #### _My Capstone project for Epicodus!_
-#### _DATE 02.26.2021_
+#### _DATE 03.15.2021_
 
 <p align="center">
     <br>
